@@ -1,0 +1,21 @@
+# Jarvis AI Agent - Complete Dependencies
+# Pure Python - NO PyAudio, NO compilation needed!
+
+# Web Search & Scraping
+requests>=2.28.0
+beautifulsoup4>=4.11.0
+
+# Console Output
+colorama>=0.4.5
+
+# Voice System - NO PYAUDIO
+# These are pure Python with pre-built wheels
+sounddevice>=0.4.5   # Audio recording (replaces PyAudio)
+vosk>=0.3.45         # Offline speech recognition
+numpy>=1.24.0        # Audio processing
+
+# Voice Output
+pyttsx3>=2.90
+
+# Text-to-Speech for voice responses
+# (pyttsx3 handles this natively, no external API needed)
