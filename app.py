@@ -21,18 +21,28 @@ with open("styles/style.css") as f:
 # SESSION STATE
 # ---------------------------------
 
+if "ai_state" not in st.session_state:
+    st.session_state.ai_state = "idle"
+
+
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
+if "ai_state" not in st.session_state:
+    st.session_state.ai_state = "idle"
 # ---------------------------------
 # HEADER
 # ---------------------------------
 
-st.markdown('<div class="title">JARVIS AI</div>', unsafe_allow_html=True)
 st.markdown(
-    '<div class="subtitle">Voice-Controlled AI Assistant</div>',
+    f'''
+    <div class="orb-container">
+        <div class="orb {st.session_state.ai_state}"></div>
+    </div>
+    ''',
     unsafe_allow_html=True
 )
+
 # ---------------------------------
 # TOP STATUS CARDS
 # ---------------------------------
@@ -121,3 +131,4 @@ for role, msg in st.session_state.messages:
         )
 
 st.markdown('</div>', unsafe_allow_html=True)
+

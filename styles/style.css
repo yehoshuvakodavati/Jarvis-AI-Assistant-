@@ -33,12 +33,82 @@ body {
     width: 220px;
     height: 220px;
     border-radius: 50%;
-    background: radial-gradient(circle, #00d9ff 0%, #0066ff 60%, #001133 100%);
+    transition: all 0.4s ease;
+}
+
+/* ---------------- */
+/* IDLE */
+/* ---------------- */
+
+.idle {
+    background: radial-gradient(circle, #00d9ff 0%, #0044ff 100%);
     box-shadow:
-        0 0 30px #00d9ff,
-        0 0 60px #0066ff,
-        0 0 90px #00d9ff;
-    animation: pulse 2s infinite;
+        0 0 20px #00d9ff,
+        0 0 50px #0044ff;
+}
+
+/* ---------------- */
+/* LISTENING */
+/* ---------------- */
+
+.listening {
+    background: radial-gradient(circle, #00fff2 0%, #0088ff 100%);
+    box-shadow:
+        0 0 30px #00fff2,
+        0 0 70px #0088ff;
+    animation: pulse 1s infinite;
+}
+
+/* ---------------- */
+/* THINKING */
+/* ---------------- */
+
+.thinking {
+    background: radial-gradient(circle, #b400ff 0%, #5900ff 100%);
+    box-shadow:
+        0 0 30px #b400ff,
+        0 0 80px #5900ff;
+    animation: rotateOrb 2s linear infinite;
+}
+
+/* ---------------- */
+/* SPEAKING */
+/* ---------------- */
+
+.speaking {
+    background: radial-gradient(circle, #00ff99 0%, #00cc66 100%);
+    box-shadow:
+        0 0 40px #00ff99,
+        0 0 90px #00cc66;
+    animation: pulse 0.7s infinite;
+}
+
+/* ---------------- */
+/* ANIMATIONS */
+/* ---------------- */
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotateOrb {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes pulse {
