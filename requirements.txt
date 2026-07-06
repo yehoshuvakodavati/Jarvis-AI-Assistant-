@@ -1,21 +1,33 @@
-# Jarvis AI Agent - Complete Dependencies
-# Pure Python - NO PyAudio, NO compilation needed!
+# =============================================================================
+# Jarvis Multi-Agent AI Operating System - Dependencies
+# =============================================================================
 
-# Web Search & Scraping
+# ---- Core ----
+pydantic>=2.0.0
+typing-extensions>=4.5.0
+
+# ---- Web ----
 requests>=2.28.0
 beautifulsoup4>=4.11.0
+urllib3>=1.26.0
 
-# Console Output
-colorama>=0.4.5
+# ---- UI ----
+streamlit>=1.28.0
+streamlit-mic-recorder>=0.0.4
 
-# Voice System - NO PYAUDIO
-# These are pure Python with pre-built wheels
-sounddevice>=0.4.5   # Audio recording (replaces PyAudio)
-vosk>=0.3.45         # Offline speech recognition
-numpy>=1.24.0        # Audio processing
-
-# Voice Output
+# ---- Voice ----
+faster-whisper>=0.10.0
+sounddevice>=0.4.5
+numpy>=1.24.0
+scipy>=1.10.0
 pyttsx3>=2.90
 
-# Text-to-Speech for voice responses
-# (pyttsx3 handles this natively, no external API needed)
+# ---- Console ----
+colorama>=0.4.5
+
+# ---- Optional: Vector Database (pick one) ----
+# chromadb>=0.4.0        # For production vector storage
+# faiss-cpu>=1.7.4       # Alternative vector storage
+
+# ---- Optional: Advanced Embeddings ----
+# sentence-transformers>=2.2.0   # Local embeddings without Ollama
